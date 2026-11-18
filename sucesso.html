@@ -1,24 +1,56 @@
->
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sucesso</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Login Sucesso</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .mensagem {
+            background-color: #F8F1E9;
+            color: #702D42;
+            padding: 40px;
+            border-radius: 18px;
+            text-align: center;
+            width: 360px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .emoji {
+            font-size: 75px;
+            margin-bottom: 15px;
+        }
+
+        .mensagem h1 {
+            color: #702D42;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .mensagem h2 {
+            color: #17243B;
+            font-size: 19px;
+        }
+    </style>
 </head>
+
 <body>
 
-    <div class="container sucesso">
-        <h1>SUCESSO!</h1>
+    <div class="mensagem">
 
-        <p>Login realizado com sucesso!</p>
+        <div class="emoji">✅</div>
 
-        <button onclick="window.location.href='./index.html'">
-            VOLTAR AO LOGIN
-        </button>
+        <h1>PARABÉNS!</h1>
+
+        <h2>Você acertou!</h2>
+
+        <a href="index.html">Voltar ao login</a>
+
     </div>
 
 </body>

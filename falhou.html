@@ -1,29 +1,69 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Falhou</title>
+    <title>Login Falhou</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .emoji {
+            font-size: 75px;
+            margin-bottom: 15px;
+        }
+
+        .mensagem {
+            background-color: #F8F1E9;
+            color: #702D42;
+            padding: 35px;
+            border-radius: 18px;
+            text-align: center;
+            width: 360px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .mensagem h1 {
+            color: #702D42;
+            margin-bottom: 15px;
+        }
+
+        .mensagem h2 {
+            color: #17243B;
+            font-size: 18px;
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>LOGIN FALHOU!</h1>
+    <div class="mensagem">
 
-    <h2 id="mensagem"></h2>
+        <div class="emoji">😂</div>
 
-    <a href="index.html">Tentar novamente</a>
+        <h1>VOCÊ ERROU!</h1>
+
+        <h2 id="mensagem"></h2>
+
+        <a href="index.html">Tentar novamente</a>
+
+    </div>
 
     <script>
-        const erro = new URLSearchParams(window.location.search).get("erro");
+        const erro = new URLSearchParams(
+            window.location.search
+        ).get("erro");
 
         const mensagem = document.getElementById("mensagem");
 
         if (erro === "usuario") {
             mensagem.textContent = "Usuário inválido!";
-        } 
+        }
         else if (erro === "senha") {
             mensagem.textContent = "Senha inválida!";
-        } 
+        }
         else if (erro === "ambos") {
             mensagem.textContent = "Usuário e senha inválidos!";
         }
