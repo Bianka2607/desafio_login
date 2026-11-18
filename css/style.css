@@ -1,0 +1,112 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #702D42;
+    color: #FFF9F2;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título */
+h1 {
+    color: #FFF9F2;
+    font-size: 34px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Caixa de login */
+form {
+    background: #F8F1E9;
+    width: 360px;
+    padding: 45px 35px;
+    border-radius: 18px;
+    border: 2px solid #D7B9BD;
+
+    box-shadow: 0 12px 30px rgba(30, 12, 22, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Campos */
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #C9A8AD;
+    border-radius: 9px;
+    background: #FFFCF7;
+    color: #17243B;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border: 2px solid #702D42;
+    box-shadow: 0 0 6px rgba(112, 45, 66, 0.2);
+}
+
+/* Botão */
+button {
+    padding: 15px;
+    background: #702D42;
+    color: #FFF9F2;
+    border: 2px solid #702D42;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #17243B;
+    border-color: #17243B;
+}
+
+/* Mensagens */
+h2 {
+    color: #FFF9F2;
+    font-size: 23px;
+    margin: 15px 0 25px;
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: #F4DCE0;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+    form {
+        width: 90%;
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}

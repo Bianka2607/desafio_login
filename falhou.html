@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Falhou</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>LOGIN FALHOU!</h1>
+
+    <h2 id="mensagem"></h2>
+
+    <a href="index.html">Tentar novamente</a>
+
+    <script>
+        const erro = new URLSearchParams(window.location.search).get("erro");
+
+        const mensagem = document.getElementById("mensagem");
+
+        if (erro === "usuario") {
+            mensagem.textContent = "Usuário inválido!";
+        } 
+        else if (erro === "senha") {
+            mensagem.textContent = "Senha inválida!";
+        } 
+        else if (erro === "ambos") {
+            mensagem.textContent = "Usuário e senha inválidos!";
+        }
+    </script>
+
+</body>
+</html>
